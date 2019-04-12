@@ -1,0 +1,22 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core">
+   <Dialog
+		id="BancoDialog"
+		title="{view>/titulo}"
+		class="sapUiSizeCompact">
+   	
+   		<VBox id="vBoxBanco" class="sapUiSmallMargin">
+   			<Label text="Código:" labelFor="codigo"/>
+			<Input value="{model>/Codigo}" id="codigo" required="true" editable="{view>/codigoEdit}"/>
+			
+			<Label text="Nome:" labelFor="nome"/>
+			<Input value="{model>/Nome}" id="nome" required="true"/>
+		</VBox>
+   		
+   		<buttons>
+   			<Button text="Salvar" press="onSaveDialog" type="Accept"/>
+   			<Button text="Fechar" press="onCloseDialog" type="Reject"/>
+   		</buttons>
+   </Dialog>
+</core:FragmentDefinition>
