@@ -18,8 +18,6 @@ sap.ui.define([
 			this.getOwnerComponent().setModel(oJSONModel, "model");
 			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
 
-			
-
 			this.getModel().attachMetadataLoaded(function(){
 				var oFilter = new Filter("Empresa", FilterOperator.EQ, Session.get("EMPRESA_ID"));
 				var oView = this.getView();
